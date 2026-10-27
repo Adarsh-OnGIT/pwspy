@@ -27,9 +27,7 @@ export default function Home() {
 
       <div className="relative mx-auto w-full max-w-3xl px-5 pb-16 pt-8">
         <header className="flex items-center justify-between">
-          <span className="text-lg font-extrabold tracking-tight">
-            PW<span className="text-emerald-400">Spy</span>
-          </span>
+          <span className="text-lg font-extrabold tracking-tight">PW<span className="text-emerald-400">Spy</span></span>
           <a href="https://t.me/+R2qw9858zEoyNDQ1" target="_blank" rel="noopener" className="rounded-full border border-white/15 px-4 py-2 text-xs font-semibold text-white/80">Telegram</a>
         </header>
 
@@ -42,9 +40,7 @@ export default function Home() {
             <Link href={active ? '/app' : '/access'} className="flex min-h-[56px] flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 px-6 text-base font-bold text-[#04120c] shadow-[0_12px_40px_rgba(52,211,153,.35)]">
               {active ? `Access Active — Open · ${left}` : 'Get Access →'}
             </Link>
-            {active && (
-              <button onClick={() => { clearAccess(); setActive(false); }} className="min-h-[56px] rounded-full border border-white/15 px-6 text-sm font-semibold text-white/70">Reset</button>
-            )}
+            {active && <button onClick={() => { clearAccess(); setActive(false); }} className="min-h-[56px] rounded-full border border-white/15 px-6 text-sm font-semibold text-white/70">Reset</button>}
           </div>
         </section>
 
