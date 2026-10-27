@@ -30,11 +30,7 @@ export default function AppHome() {
           <Link href="/" className="text-xs text-white/50">← Home</Link>
         </div>
 
-        {!ok && (
-          <div className="mt-6 rounded-2xl border border-rose-400/30 bg-rose-400/10 p-4 text-sm">
-            Access expired — <Link href="/access" className="font-bold underline">unlock again</Link>.
-          </div>
-        )}
+        {!ok && <div className="mt-6 rounded-2xl border border-rose-400/30 bg-rose-400/10 p-4 text-sm">Access expired — <Link href="/access" className="font-bold underline">unlock again</Link>.</div>}
 
         <h1 className="mt-8 text-2xl font-extrabold">Pick your institute.</h1>
 
