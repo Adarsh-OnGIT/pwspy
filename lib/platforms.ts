@@ -57,3 +57,8 @@ export const PLATFORMS: Platform[] = [
     external: 'https://rolexcoderz.com/Pi/',
   },
 ];
+```ts
+export function findPlatform(slug: string): Platform | undefined {
+  return PLATFORMS.find((platform) => platform.slug === slug);
+}
+```
