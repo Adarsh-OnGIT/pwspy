@@ -2,17 +2,17 @@ export type Platform = { slug: string; name: string; meta: string; tag: string; 
 
 export const PLATFORMS: Platform[] = [
   { slug: 'pw', name: 'Physics Wallah', meta: 'ALL Classes', tag: 'PW',
-    url: 'https://pw.classx.co.in/?all=1#my', direct: 'https://pw.classx.co.in/?all=1#my', external: 'https://pw.classx.co.in/?all=1#my' },
+    url: 'https://rolexcoderz.com/PW/', direct: 'https://rolexcoderz.com/PW/', external: 'https://rolexcoderz.com/PW/' },
   { slug: 'vt', name: 'Vibrant Academy', meta: 'JEE', tag: 'VT',
-    url: 'https://vibrantacademy.classx.co.in/?all=1#my', direct: 'https://vibrantacademy.classx.co.in/?all=1#my', external: 'https://vibrantacademy.classx.co.in/?all=1#my' },
+    url: 'https://rolexcoderz.com/VT/', direct: 'https://rolexcoderz.com/VT/', external: 'https://rolexcoderz.com/VT/' },
   { slug: 'nt', name: 'Next Toppers', meta: 'Board Exams', tag: 'NT',
-    url: 'https://nexttoppers.classx.co.in/?all=1#my', direct: 'https://nexttoppers.classx.co.in/?all=1#my', external: 'https://nexttoppers.classx.co.in/?all=1#my' },
+    url: 'https://rolexcoderz.com/NT/', direct: 'https://rolexcoderz.com/NT/', external: 'https://rolexcoderz.com/NT/' },
   { slug: 'mj', name: 'Mission Jeet', meta: 'JEE / NEET', tag: 'MJ',
-    url: 'https://missionjeet.classx.co.in/?all=1#my', direct: 'https://missionjeet.classx.co.in/?all=1#my', external: 'https://missionjeet.classx.co.in/?all=1#my' },
+    url: 'https://rolexcoderz.com/MissionJeet/', direct: 'https://rolexcoderz.com/MissionJeet/', external: 'https://rolexcoderz.com/MissionJeet/' },
   { slug: 'pi', name: 'PW OTT — Pi', meta: 'OTT', tag: 'Pi',
-    url: 'https://pwott.classx.co.in/', direct: 'https://pwott.classx.co.in/', external: 'https://pwott.classx.co.in/' },
+    url: 'https://rolexcoderz.com/Pi/', direct: 'https://rolexcoderz.com/Pi/', external: 'https://rolexcoderz.com/Pi/' },
   { slug: 'ar', name: 'English by Aleena Rais', meta: 'Grammar', tag: 'AR',
-    url: 'https://aleenarais.classx.co.in/', direct: 'https://aleenarais.classx.co.in/', external: 'https://aleenarais.classx.co.in/' },
+    url: 'https://rolexcoderz.com/AR/', direct: 'https://rolexcoderz.com/AR/', external: 'https://rolexcoderz.com/AR/' },
 ];
 
 export const findPlatform = (slug: string) => PLATFORMS.find((p) => p.slug === slug);
