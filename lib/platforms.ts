@@ -2,9 +2,9 @@ export type Platform = {
   slug: string;
   name: string;
   tag: string;
-  url: string;      // iframe target
-  direct: string;   // same as url
-  external: string; // new-tab target
+  url: string;
+  direct: string;
+  external: string;
 };
 
 export const PLATFORMS: Platform[] = [
@@ -42,7 +42,7 @@ export const PLATFORMS: Platform[] = [
   },
   {
     slug: 'ar',
-    name: 'English Speaking — Aleena Rais',
+    name: 'English Speaking - Aleena Rais',
     tag: 'Grammar',
     url: 'https://rolexcoderz.com/AR/',
     direct: 'https://rolexcoderz.com/AR/',
@@ -50,7 +50,7 @@ export const PLATFORMS: Platform[] = [
   },
   {
     slug: 'pi',
-    name: 'PW OTT — Pi',
+    name: 'PW OTT - Pi',
     tag: 'OTT',
     url: 'https://rolexcoderz.com/Pi/',
     direct: 'https://rolexcoderz.com/Pi/',
