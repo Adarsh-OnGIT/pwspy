@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PW</title>
+<style>
+  html,body{margin:0;height:100%;background:#07070f}
+  iframe{width:100%;height:100%;border:0;display:block}
+  #bar{position:fixed;left:0;right:0;bottom:0;padding:7px 12px;
+       font:12px system-ui;color:#8b96a5;background:rgba(7,7,15,.92);text-align:center}
+</style>
+</head>
+<body>
+
+<iframe id="f" allow="autoplay; fullscreen; clipboard-write"></iframe>
+<div id="bar">unlocking…</div>
+
+<script>
+const SECRET = 'RolexCoderZ_SECRET_STRING_xyz9!';
+const TARGET = 'https://rolexcoderz.com/PW/';
+const f   = document.getElementById('f');
+const bar = document.getElementById('bar');
+let phase = 0;
+
+const CODE = `(function(){
+  var S=${JSON.stringify(SECRET)};
+  var h=function(u){return Array.from(u).map(function(b){return b.toString(16).padStart(2,'0')}).join('')};
+  var salt=h(crypto.getRandomValues(new Uint8Array(8)));
+  var exp_s=Math.floor(Date.now()/1000)+86400;
+  crypto.subtle.importKey('raw',new TextEncoder().encode(S),{name:'HMAC',hash:'SHA-256'},false,['sign'])
+    .then(function(k){return crypto.subtle.sign('HMAC',k,new TextEncoder().encode(salt+'|'+exp_s))})
+    .then(function(sig){
+      localStorage.setItem('rcz_token',JSON.stringify({
+        token:h(new Uint8Array(sig)),salt:salt,exp:exp_s*1000,exp_s:exp_s}));
+    });
+})()`;
+
+f.onload = () => {
+  if (phase !== 0) return;
+  phase = 1;
+  try {
+    f.contentWindow.location.href = 'javascript:' + encodeURIComponent(CODE);
+  } catch (e) {
+    phase = 2;
+    bar.textContent = 'inject fail';
+    return;
+  }
+  setTimeout(() => {
+    phase = 2;
+    f.src = TARGET;
+    setTimeout(() => bar.style.display = 'none', 800);
+  }, 1200);
+};
+
+f.src = TARGET;
+</script>
+</body>
+</html>
